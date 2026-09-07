@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+}
+
+:root {
+  --app-bg: #fafaf8;
+  --surface: #ffffff;
+  --surface-soft: #fffdf8;
+  --surface-hover: #f7f5f0;
+
+  --border: #e8e5de;
+  --border-soft: #eeeae2;
+
+  --text-primary: #292d32;
+  --text-secondary: #65696e;
+  --text-muted: #999a96;
+
+  --input-bg: #ffffff;
+
+  --sage: #e3eddf;
+  --sage-text: #587052;
+
+  --blue: #dce9f3;
+  --blue-text: #47677b;
+
+  --peach: #f8ebd8;
+  --peach-text: #806849;
+
+  --lavender: #e8e0f1;
+  --lavender-text: #69577b;
+
+  --rose: #f4ddda;
+  --rose-text: #9a5550;
+}
+
+/* =========================
+   DARK CHALK THEME
+========================= */
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --app-bg: #171816;
+  --surface: #20211f;
+  --surface-soft: #242522;
+  --surface-hover: #2b2c29;
+
+  --border: #343631;
+  --border-soft: #2d2f2b;
+
+  --text-primary: #f2f0e9;
+  --text-secondary: #c2c0b8;
+  --text-muted: #8f918a;
+
+  --input-bg: #292a27;
+
+  --sage: #344036;
+  --sage-text: #b8cdb5;
+
+  --blue: #303d45;
+  --blue-text: #b8cedc;
+
+  --peach: #443b2f;
+  --peach-text: #dbc5a2;
+
+  --lavender: #3d3545;
+  --lavender-text: #d0bedc;
+
+  --rose: #493534;
+  --rose-text: #dfb5b0;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--app-bg);
+  color: var(--text-primary);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* =========================
+   GLOBAL THEME OVERRIDES
+========================= */
+
+html[data-theme="dark"] .bg-white {
+  background-color: var(--surface) !important;
+}
+
+html[data-theme="dark"] .bg-\[\#FAFAF8\],
+html[data-theme="dark"] .bg-\[\#F7F8FA\] {
+  background-color: var(--app-bg) !important;
+}
+
+html[data-theme="dark"] .bg-\[\#FFFDF8\] {
+  background-color: var(--surface-soft) !important;
+}
+
+html[data-theme="dark"] .bg-\[\#FCFBF8\],
+html[data-theme="dark"] .bg-\[\#F7F5F0\],
+html[data-theme="dark"] .bg-\[\#F7F4ED\] {
+  background-color: var(--surface-hover) !important;
+}
+
+/* Text */
+
+html[data-theme="dark"] .text-\[\#292D32\],
+html[data-theme="dark"] .text-\[\#3A3E43\],
+html[data-theme="dark"] .text-\[\#3B3F44\],
+html[data-theme="dark"] .text-\[\#41454A\],
+html[data-theme="dark"] .text-\[\#35393E\],
+html[data-theme="dark"] .text-\[\#3C4045\],
+html[data-theme="dark"] .text-\[\#4B4F54\],
+html[data-theme="dark"] .text-\[\#505459\] {
+  color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .text-\[\#65696E\],
+html[data-theme="dark"] .text-\[\#777A7F\],
+html[data-theme="dark"] .text-\[\#696C70\],
+html[data-theme="dark"] .text-\[\#55595E\] {
+  color: var(--text-secondary) !important;
+}
+
+html[data-theme="dark"] .text-\[\#8B8E94\],
+html[data-theme="dark"] .text-\[\#999A96\],
+html[data-theme="dark"] .text-\[\#9A9B98\] {
+  color: var(--text-muted) !important;
+}
+
+/* Borders */
+
+html[data-theme="dark"] .border-\[\#E8E5DE\],
+html[data-theme="dark"] .border-\[\#DDDAD2\],
+html[data-theme="dark"] .border-\[\#EEEAE2\],
+html[data-theme="dark"] .border-\[\#ECE8E0\] {
+  border-color: var(--border) !important;
+}
+
+/* Form controls */
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+  background-color: var(--input-bg) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Scrollbar */
+
+html[data-theme="dark"] {
+  scrollbar-color: #4a4b46 #20211f;
+}
